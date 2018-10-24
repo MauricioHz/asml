@@ -28,8 +28,6 @@ class StoreProjectRequest extends FormRequest
             'description' => 'required|max:300',
             'start_date' => 'required|date',
             'due_date' => 'required|date',
-            'owner' => 'required|integer',
-            'company_id' => 'required|integer',
         ];
     }
 
@@ -39,7 +37,6 @@ class StoreProjectRequest extends FormRequest
             'description.required' => 'La descripción es requerida',
             'start_date.required' => 'La fecha de inicio es requerida',
             'due_date.required' => 'La fecha de termino es requerida',
-            'company_id.required' => 'La compañia es requerida',
         ];
     }
 }

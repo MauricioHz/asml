@@ -30,14 +30,14 @@
 
                                <div class="form-group row align-items-center">
                                   <label class="col-3">Nombre</label>
-                                  <input class="form-control col" type="text" placeholder="Task name" name="name">
+                                  <input class="form-control col" type="text" placeholder="Nombre del proyecto" name="name">
                                </div>
                                <div class="form-group row">
                                   <label class="col-3">Descripción</label>
-                                  <textarea class="form-control col" rows="3" placeholder="Task description" name="description"></textarea>
+                                  <textarea class="form-control col" rows="3" placeholder="Breve descripción del objetivo de este proyecto ..." name="description" maxlength="50" required></textarea>
                                </div>
                                <hr>
-                               <h6>Timeline</h6>
+                               <h6>Línea de tiempo</h6>
                                <div class="form-group row align-items-center">
                                   <label class="col-6">Fecha de inicio</label>
                                   <input class="form-control col" type="date" placeholder="" name="start_date">

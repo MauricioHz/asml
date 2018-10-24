@@ -18,7 +18,7 @@ class CreateProjectsTable extends Migration
             $table->string('uuid', 60);
             $table->integer('owner')->comment('Registra el propietario del proyecto ID del usuario.');
             $table->string('name', 300);
-            $table->string('description', 1000);
+            $table->string('description', 800);
             $table->date('start_date');
             $table->date('due_date');
             $table->unsignedInteger('company_id')->comment('Registra el RUT sin DV.');

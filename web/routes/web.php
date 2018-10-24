@@ -17,11 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/getCompanys', 'CompanyController@getCompanys');
 
 Route::post('/add-project', 'ProjectController@store')->name('add-project');
 
 Route::get('/proyectos', 'ProjectController@index')->name('projects');
-Route::get('/crear-proyecto', 'ProjectController@create');
+Route::get('/crear-proyecto', 'ProjectController@create')->name('crear-proyecto');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

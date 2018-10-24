@@ -19,9 +19,10 @@
                  <div class="row content-list-head">
                     <div class="col-auto">
                        <h5>Nuevo proyecto</h5>
-                       <button class="btn btn-round" data-toggle="modal" data-target="#modal-add-project">
-                       <i class="material-icons">add</i>
-                       </button>
+                       <!--<button class="btn btn-round" data-toggle="modal" data-target="#modal-add-project">-->
+                        <a href="{{ route('crear-proyecto') }}" class="btn btn-round">
+                            <i class="material-icons">add</i>
+                        </a>    
                     </div>
                     <form class="col-md-auto">
                        <div class="input-group input-group-round">

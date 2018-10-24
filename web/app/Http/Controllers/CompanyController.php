@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Http\FormRequest;
-use App\Project;
-use Webpatser\Uuid\Uuid;
-use App\Http\Requests\StoreProjectRequest;
+use App\Models\Company;
+use Illuminate\Http\Request;
 
-
-class ProjectController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +14,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('document.project.index');
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('document.project.create');
+        //
     }
 
     /**
@@ -36,21 +33,9 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProjectRequest $request)
+    public function store(Request $request)
     {
-        $validated = $request->validated();
-
-        $project = new Project();
-        $project->uuid = Uuid::generate()->string;
-        $project->name = $request->name;
-        $project->description = $request->description;
-        $project->start_date = $request->start_date;
-        $project->due_date = $request->due_date;  
-        $project->owner = "1";   
-        $project->company_id = "1";   
-        if($project->save()){
-            return redirect()->route('projects');
-        }
+        //
     }
 
     /**
@@ -59,9 +44,10 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function findProjectById($id)
+    public function getCompanys()
     {
-        //
+        $companys = Company::all();
+        return response()->json($companys);
     }
 
     /**
