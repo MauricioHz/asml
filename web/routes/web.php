@@ -21,6 +21,7 @@ Auth::routes();
 Route::post('/add-project', 'ProjectController@store')->name('add-project');
 
 Route::get('/proyectos', 'ProjectController@index')->name('projects');
+Route::get('/crear-proyecto', 'ProjectController@create');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
