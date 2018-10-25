@@ -78,7 +78,7 @@
                  <!--end of content list-->
               </div>
               <!--end of tab-->
-              <div class="tab-pane fade active show" id="activity" role="tabpanel" aria-labelledby="activity-tab" data-filter-list="list-group-activity">
+              <div class="tab-pane fade active" id="activity" role="tabpanel" aria-labelledby="activity-tab" data-filter-list="list-group-activity">
                     <div class="content-list">
                         <div class="row content-list-head">
                             <div class="col-auto">

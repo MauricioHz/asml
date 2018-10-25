@@ -102,6 +102,7 @@
         </div>
 
         <script type="text/javascript" src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assets/js/moment.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/js/autosize.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/js/popper.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/js/prism.min.js') }}"></script>
@@ -111,6 +112,8 @@
         <script type="text/javascript" src="{{ asset('assets/js/list.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/js/theme.js') }}"></script>
+
+        <script type="text/javascript" src="{{ asset('assets/js/project/app.js') }}"></script>
 
         <style type="text/css">
             .layout-switcher{ position: fixed; bottom: 0; left: 50%; transform: translateX(-50%) translateY(73px); color: #fff; transition: all .35s ease; background: #343a40; border-radius: .25rem .25rem 0 0; padding: .75rem; z-index: 999; }

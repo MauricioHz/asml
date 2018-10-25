@@ -55,6 +55,9 @@
                       </div>
                       <!--end of modal body-->
                       <div class="modal-footer">
+                      <input type="hidden" name="uuid" value="{{ Uuid::generate()->string }}">
+                         <input type="hidden" name="owner" value="1">
+                         <input type="hidden" name="company_id" value="1">
                          <button role="button" class="btn btn-primary" type="submit">
                          Crear proyecto
                          </button>
