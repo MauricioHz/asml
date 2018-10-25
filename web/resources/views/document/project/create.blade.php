@@ -30,11 +30,11 @@
 
                                <div class="form-group row align-items-center">
                                   <label class="col-3">Nombre</label>
-                                  <input class="form-control col" type="text" placeholder="Nombre del proyecto" name="name">
+                                  <input class="form-control col" type="text" placeholder="Nombre del proyecto" name="name" maxlength="300">
                                </div>
                                <div class="form-group row">
                                   <label class="col-3">Descripción</label>
-                                  <textarea class="form-control col" rows="3" placeholder="Breve descripción del objetivo de este proyecto ..." name="description" maxlength="50" required></textarea>
+                                  <textarea class="form-control col" rows="3" placeholder="Breve descripción del objetivo de este proyecto ..." name="description" maxlength="800" required></textarea>
                                </div>
                                <hr>
                                <h6>Línea de tiempo</h6>

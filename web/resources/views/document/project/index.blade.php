@@ -42,87 +42,35 @@
                           <h6>Lista de proyectos en curso</h6>
                        </div>
                        <div class="card-list-body filter-list-1539959952929">
-                          <div class="card card-task">
-                             <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                             </div>
-                             <div class="card-body">
-                                <div class="card-title">
-                                   <a href="#">
-                                      <h6 data-filter-by="text" class="H6-filter-by-text" data-toggle="tooltip" title="Este es un ejemplo">Client objective meeting</h6>
-                                   </a>
-                                   <span class="text-small">Today</span>
-                                </div>
-                                <div class="card-meta">
-                                   <ul class="avatars">
-                                      <li>
-                                         <a href="#" data-toggle="tooltip" title="Sally">
-                                         <img alt="Sally Harper" class="avatar" src="assets/img/avatar-female-3.jpg">
-                                         </a>
-                                      </li>
-                                   </ul>
-                                   <div class="d-flex align-items-center">
-                                      <i class="material-icons">playlist_add_check</i>
-                                      <span>3/4</span>
-                                   </div>
-
-                                </div>
-                             </div>
-                          </div>
-                          <div class="card card-task">
-                             <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                             </div>
-                             <div class="card-body">
-                                <div class="card-title">
-                                   <a href="#">
-                                      <h6 data-filter-by="text" class="H6-filter-by-text">Target market trend analysis</h6>
-                                   </a>
-                                   <span class="text-small">5 days</span>
-                                </div>
-                                <div class="card-meta">
-                                   <ul class="avatars">
-                                      <li>
-                                         <a href="#" data-toggle="tooltip" title="Peggy">
-                                         <img alt="Peggy Brown" class="avatar" src="assets/img/avatar-female-2.jpg">
-                                         </a>
-                                      </li>
-                                   </ul>
-                                   <div class="d-flex align-items-center">
-                                      <i class="material-icons">playlist_add_check</i>
-                                      <span>2/10</span>
-                                   </div>
- 
-                                </div>
-                             </div>
-                          </div>
-                          <div class="card card-task">
-                             <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                             </div>
-                             <div class="card-body">
-                                <div class="card-title">
-                                   <a href="#">
-                                      <h6 data-filter-by="text" class="H6-filter-by-text">Assemble Outcomes Report for client</h6>
-                                   </a>
-                                   <span class="text-small">7 days</span>
-                                </div>
-                                <div class="card-meta">
-                                   <ul class="avatars">
-                                      <li>
-                                         <a href="#" data-toggle="tooltip" title="Claire">
-                                         <img alt="Claire Connors" class="avatar" src="assets/img/avatar-female-1.jpg">
-                                         </a>
-                                      </li>
-                                   </ul>
-                                   <div class="d-flex align-items-center">
-                                      <i class="material-icons">playlist_add_check</i>
-                                      <span>0/6</span>
-                                   </div>
- 
-                                </div>
-                             </div>
-                          </div>
+                        @foreach ($projects as $project)                            
+                            <div class="card card-task">
+                                    <div class="progress">
+                                       <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="card-body">
+                                       <div class="card-title">
+                                          <a href="#">
+                                             <h6 data-filter-by="text" class="H6-filter-by-text" data-toggle="tooltip" title="Este es un ejemplo">{{ $project->name }}</h6>
+                                          </a>
+                                          <span class="text-small">{{ $project->description }}</span>
+                                       </div>
+                                       <div class="card-meta">
+                                          <ul class="avatars">
+                                             <li>
+                                                <a href="#" data-toggle="tooltip" title="Sally">
+                                                <img alt="Sally Harper" class="avatar" src="assets/img/avatar-female-3.jpg">
+                                                </a>
+                                             </li>
+                                          </ul>
+                                          <div class="d-flex align-items-center">
+                                             <i class="material-icons">playlist_add_check</i>
+                                             <span>3/4</span>
+                                          </div>
+       
+                                       </div>
+                                    </div>
+                                 </div>                            
+                        @endforeach
                        </div>
                     </div>
                     <!--end of content list body-->

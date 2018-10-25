@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Project;
+use App\Models\Project;
 use Webpatser\Uuid\Uuid;
 use App\Http\Requests\StoreProjectRequest;
 
@@ -17,7 +17,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('document.project.index');
+        $projects = Project::all();        
+        return view('document.project.index')->with('projects', $projects);
     }
 
     /**

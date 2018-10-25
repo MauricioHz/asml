@@ -25,7 +25,7 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'name' => 'required|max:300',
-            'description' => 'required|max:300',
+            'description' => 'required|max:800',
             'start_date' => 'required|date',
             'due_date' => 'required|date',
         ];
@@ -34,6 +34,7 @@ class StoreProjectRequest extends FormRequest
     public function messages(){
         return [
             'name.required' => 'El nombre es requerido',
+            'name.max' => 'El nombre no puede tener más de 300 caracteres',
             'description.required' => 'La descripción es requerida',
             'start_date.required' => 'La fecha de inicio es requerida',
             'due_date.required' => 'La fecha de termino es requerida',
