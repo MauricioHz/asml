@@ -14,7 +14,7 @@
         <div class="layout layout-nav-top">
             <div class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
                 <a class="navbar-brand" href="index.html">
-                    <img alt="Pipeline" src="assets/img/logo.svg" />
+                    <img alt="Pipeline" src="{{ asset('assets/img/logo.svg') }}" />
                 </a>
                 <div class="d-flex align-items-center">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,7 @@
                         <div class="d-none d-lg-block">
                             <div class="dropdown">
                                 <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img alt="Image" src="assets/img/avatar-male-4.jpg" class="avatar" />
+                                    <img alt="Image" src="{{ asset('assets/img/avatar-male-4.jpg') }}" class="avatar" />
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a href="nav-side-user.html" class="dropdown-item">Perfil {{ Auth::user()->name }}</a>

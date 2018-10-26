@@ -24,6 +24,8 @@ Route::post('/add-project', 'ProjectController@store')->name('add-project');
 Route::get('/proyectos', 'ProjectController@index')->name('projects');
 Route::get('/crear-proyecto', 'ProjectController@create')->name('crear-proyecto');
 
+Route::get('/detalle-del-proyecto/{id}', 'ProjectController@show')->name('projects-detail');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home', 'HomeController@create')->name('proyect.create');
