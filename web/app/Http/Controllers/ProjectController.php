@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Http\FormRequest;
-use App\Models\Project;
-use App\Models\Activity;
-use Webpatser\Uuid\Uuid;
 use App\Http\Requests\StoreProjectRequest;
+use App\Models\Activity;
+use App\Models\Project;
 
 class ProjectController extends Controller
 {
@@ -27,12 +25,7 @@ class ProjectController extends Controller
         $request->validated();
         $resultado = Project::create($request->except('_token'));
         if ($resultado->wasRecentlyCreated) {
-            //Activity::registerActivityProyecto("hsdjahkdhsak");
-            $activity = new Activity();
-            $activity->document_id = "1";
-            $activity->user_id = "1";
-            $activity->description = "Mauricio ha creado el proyecto fhdjfhds el día 23 de octubre a las 17:15 horas";
-            $activity->save();
+            Activity::registerActivityProyecto($request->uuid, $request->name);
             return redirect()->route('projects');
         }
     }
@@ -44,14 +37,14 @@ class ProjectController extends Controller
 
     public function show($id)
     {
-        if($id == null){
-            // ...
+        if ($id == null) {
+            // return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         }
-        $project = Project::find($id);
-        if($project == null){
-            // ...
+        $project = Project::where('uuid', $id)->first();
+        if ($project == null) {
+            //  return HttpNotFound();
         }
-        return view('document.project.show')->with('project', $project);        
+        return view('document.project.show')->with('project', $project);
     }
 
     public function edit($id)

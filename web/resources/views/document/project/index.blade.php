@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="card-body">
                                        <div class="card-title">
-                                          <a href="{{ route('projects-detail') }}">
+                                          <a href="{{ route('projects-detail', ['id' => $project->uuid])}}">
                                              <h6 data-filter-by="text" class="H6-filter-by-text" data-toggle="tooltip" title="Este es un ejemplo">{{ $project->name }}</h6>
                                           </a>
                                           <span class="text-small">{{ $project->description }}</span>
