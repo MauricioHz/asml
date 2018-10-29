@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Requests\StoreProjectRequest;
 use App\Models\Activity;
 use App\Models\Project;
@@ -21,7 +22,12 @@ class ProjectController extends Controller
     }
 
     public function store(StoreProjectRequest $request)
-    {
+    {   
+        $project = new Project;
+        if($project->existProyect($request->uuid, $request->name)){
+            return;
+        } 
+
         $request->validated();
         $resultado = Project::create($request->except('_token'));
         if ($resultado->wasRecentlyCreated) {

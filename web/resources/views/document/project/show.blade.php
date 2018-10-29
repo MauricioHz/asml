@@ -65,6 +65,34 @@
             <div class="tab-content">
                 <div class="tab-pane fade" id="project" role="tabpanel" aria-labelledby="project-tab">
                     <h1>{{ $project->name }}</h1>
+
+                    <form>
+                        <div class="form-group row">
+                          <label for="staticEmail" class="col-sm-3 col-form-label">Nombre del proyecto</label>
+                          <div class="col-sm-9">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ $project->name }}">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label">Descripción</label>
+                            <div class="col-sm-9">
+                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ $project->description }}">
+                            </div>
+                          </div>  
+                          <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label">Fecha de inicio</label>
+                            <div class="col-sm-9">
+                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ date('d-m-Y', strtotime($project->start_date)) }}">
+                            </div>
+                          </div> 
+                          <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label">Fecha de termino</label>
+                            <div class="col-sm-9">
+                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ date('d-m-Y', strtotime($project->due_date)) }}">
+                            </div>
+                          </div>                                                                          
+                      </form>
+
                 </div>
                 <div class="tab-pane fade show active" id="task" role="tabpanel" aria-labelledby="task-tab">
                     <div class="content-list" data-filter-list="checklist">

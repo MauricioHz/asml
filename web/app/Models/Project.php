@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB; 
 
 class Project extends Model
 {
@@ -29,4 +30,13 @@ class Project extends Model
         'owner',
         'company_id'
     ];    
+
+    public function existProyect($uuid, $name){
+        $project = DB::table('projects')->where('uuid', $uuid)->orWhere('name', $name)->first();  
+        if($project){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

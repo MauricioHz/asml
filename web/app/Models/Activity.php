@@ -48,7 +48,7 @@ class Activity extends Model
         $activity->description = $log;
         $activity->save();
 
-        dd($respuesta); return;
+        //dd($respuesta); return;
     
     }
 
