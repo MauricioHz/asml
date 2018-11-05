@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Repositories\UserRepository;
 
 use App\Http\Requests\StoreProjectRequest;
 use App\Models\Activity;
@@ -9,6 +9,12 @@ use App\Models\Project;
 
 class ProjectController extends Controller
 {
+    private $_users;
+
+    public function __construct(UserRepository $users)
+    {
+        $this->_users = $users;
+    }
 
     public function index()
     {
@@ -49,7 +55,9 @@ class ProjectController extends Controller
         $project = Project::where('uuid', $id)->first();
         if ($project == null) {
             //  return HttpNotFound();
-        }
+        }        
+        $project->users = $this->_users->getAllUser();
+        // dd($project);return;
         return view('document.project.show')->with('project', $project);
     }
 

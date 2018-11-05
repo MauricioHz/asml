@@ -33,3 +33,6 @@ Route::get('/home', 'HomeController@create')->name('proyect.create');
 Route::get('/unproyecto', 'HomeController@unproyecto')->name('proyect.unproyecto');
  
 Route::get('/logout', 'HomeController@index')->name('logout');
+
+//
+Route::resource('user', 'UserController');

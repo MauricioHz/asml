@@ -65,12 +65,12 @@
                         </form>
                         <div class="dropdown mx-lg-2">
                             <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="newContentButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Add New
+                                Crear nuevo
                             </button>
                             <div class="dropdown-menu" aria-labelledby="newContentButton">
-                                <a class="dropdown-item" href="#">Team</a>
-                                <a class="dropdown-item" href="#">Project</a>
-                                <a class="dropdown-item" href="#">Task</a>
+                                <a class="dropdown-item" href="#">Rol</a>
+                                <a class="dropdown-item" href="#">Usuario</a>
+                                <a class="dropdown-item" href="#">Proyecto</a>
                             </div>
                         </div>
                         <div class="d-none d-lg-block">

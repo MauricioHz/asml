@@ -712,7 +712,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Manage Users</h5>
+                            <h5 class="modal-title">Gestionar Usuarios</h5>
                             <button type="button" class="close btn btn-round" data-dismiss="modal" aria-label="Close">
                                 <i class="material-icons">close</i>
                             </button>
@@ -724,19 +724,19 @@
                                     <ul class="avatars text-center">
 
                                         <li>
-                                            <img alt="Claire Connors" src="assets/img/avatar-female-1.jpg" class="avatar" data-toggle="tooltip" data-title="Claire Connors">
+                                            <img alt="Claire Connors" src="{{ asset('assets/img/avatar-female-3.jpg') }}" class="avatar" data-toggle="tooltip" data-title="Claire Connors">
                                         </li>
 
                                         <li>
-                                            <img alt="Marcus Simmons" src="assets/img/avatar-male-1.jpg" class="avatar" data-toggle="tooltip" data-title="Marcus Simmons">
+                                            <img alt="Marcus Simmons" src="{{ asset('assets/img/avatar-female-3.jpg') }}" class="avatar" data-toggle="tooltip" data-title="Marcus Simmons">
                                         </li>
 
                                         <li>
-                                            <img alt="Peggy Brown" src="assets/img/avatar-female-2.jpg" class="avatar" data-toggle="tooltip" data-title="Peggy Brown">
+                                            <img alt="Peggy Brown" src="{{ asset('assets/img/avatar-female-3.jpg') }}" class="avatar" data-toggle="tooltip" data-title="Peggy Brown">
                                         </li>
 
                                         <li>
-                                            <img alt="Harry Xai" src="assets/img/avatar-male-2.jpg" class="avatar" data-toggle="tooltip" data-title="Harry Xai">
+                                            <img alt="Harry Xai" src="{{ asset('assets/img/avatar-female-3.jpg') }}" class="avatar" data-toggle="tooltip" data-title="Harry Xai">
                                         </li>
 
                                     </ul>
@@ -749,103 +749,22 @@
                                     </div>
                                     <input type="search" class="form-control filter-list-input" placeholder="Filter members" aria-label="Filter Members" aria-describedby="filter-members">
                                 </div>
-                                <div class="form-group-users filter-list-1540516272231"><div class="custom-control custom-checkbox">
+                                <div class="form-group-users filter-list-1540516272231">
+
+                                    <!-- inicio -->
+                                    @foreach ($project->users as $user)
+                                    <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="user-manage-1" checked="">
                                         <label class="custom-control-label" for="user-manage-1">
                                             <div class="d-flex align-items-center">
-                                                <img alt="Claire Connors" src="assets/img/avatar-female-1.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Claire Connors</span>
+                                                <img alt="Claire Connors" src="{{ asset('assets/img/avatar-female-3.jpg') }}" class="avatar mr-2">
+                                            <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Claire Connors {{ $user->name_user }} {{ $user->paterno }} {{ $user->materno }}</span>
                                             </div>
                                         </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-2" checked="">
-                                        <label class="custom-control-label" for="user-manage-2">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Marcus Simmons" src="assets/img/avatar-male-1.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Marcus Simmons</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-3" checked="">
-                                        <label class="custom-control-label" for="user-manage-3">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Peggy Brown" src="assets/img/avatar-female-2.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Peggy Brown</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-4" checked="">
-                                        <label class="custom-control-label" for="user-manage-4">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Harry Xai" src="assets/img/avatar-male-2.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Harry Xai</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-5">
-                                        <label class="custom-control-label" for="user-manage-5">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Sally Harper" src="assets/img/avatar-female-3.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Sally Harper</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-6">
-                                        <label class="custom-control-label" for="user-manage-6">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Ravi Singh" src="assets/img/avatar-male-3.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Ravi Singh</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-7">
-                                        <label class="custom-control-label" for="user-manage-7">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Kristina Van Der Stroem" src="assets/img/avatar-female-4.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Kristina Van Der Stroem</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-8">
-                                        <label class="custom-control-label" for="user-manage-8">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="David Whittaker" src="assets/img/avatar-male-4.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">David Whittaker</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-9">
-                                        <label class="custom-control-label" for="user-manage-9">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Kerri-Anne Banks" src="assets/img/avatar-female-5.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Kerri-Anne Banks</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-10">
-                                        <label class="custom-control-label" for="user-manage-10">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Masimba Sibanda" src="assets/img/avatar-male-5.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Masimba Sibanda</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-11">
-                                        <label class="custom-control-label" for="user-manage-11">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Krishna Bajaj" src="assets/img/avatar-female-6.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Krishna Bajaj</span>
-                                            </div>
-                                        </label>
-                                    </div><div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="user-manage-12">
-                                        <label class="custom-control-label" for="user-manage-12">
-                                            <div class="d-flex align-items-center">
-                                                <img alt="Kenny Tran" src="assets/img/avatar-male-6.jpg" class="avatar mr-2">
-                                                <span class="h6 mb-0 SPAN-filter-by-text" data-filter-by="text">Kenny Tran</span>
-                                            </div>
-                                        </label>
-                                    </div></div>
+                                    </div>
+                                    @endforeach
+                                    <!-- fin -->
+
                             </div>
                         </div>
                         <!--end of modal body-->
